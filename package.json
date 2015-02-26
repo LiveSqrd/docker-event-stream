@@ -1,6 +1,6 @@
 {
   "name": "docker-event-stream",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Docker event stream",
   "main": "lib/index.js",
   "dependencies": {
