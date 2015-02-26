@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/LiveSqrd/docker-events.git"
+    "url": "git://github.com/LiveSqrd/docker-event-stream.git"
   },
   "keywords": [
     "docker",
@@ -31,7 +31,7 @@
   "author": "Nathan Zadoks",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LiveSqrd/docker-events/issues"
+    "url": "https://github.com/LiveSqrd/docker-event-stream/issues"
   },
-  "homepage": "https://github.com/LiveSqrd/docker-events"
+  "homepage": "https://github.com/LiveSqrd/docker-event-stream"
 }
