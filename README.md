@@ -1,6 +1,7 @@
 # docker-event-stream
 
   The Docker event stream as a node stream.
+  Automatically retries on connection failure. This includes the initial connection.
 
 ## Installation
 
