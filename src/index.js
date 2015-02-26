@@ -18,7 +18,10 @@ let reconnect = inject(function(docker) {
   return s
 })
 
-export default function eventStream({ since, host }, cb) {
+export default function eventStream(opts, cb) {
+  if (typeof opts == 'function') [opts, cb] = [undefined, opts]
+  let {since, host} = opts || {}
+
   let stream
     , re = reconnect({}, (conn) => conn.pipe(stream, { end: false }))
 
