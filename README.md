@@ -11,11 +11,11 @@
 var eventStream = require('docker-event-stream')
 ```
 
-### eventStream({ host = process.env.DOCKER_HOST || '/var/run/docker.sock' , since }, function()) -> EventStream
+### eventStream({ host = process.env.DOCKER_HOST || '/var/run/docker.sock' , since }, function(err, stream)) -> EventStream
 
   * `host`: address to a Docker instance, such as `/var/run/docker.sock` or `127.0.0.1:2375`.
   * `since`: Docker timestamp to start the event stream from
-  * `cb`: added as a one-time `connection` listener
+  * `cb`: called when the initial connection is established, or fails to be established
 
 ### EventStream#on('connection', function())
 

@@ -37,7 +37,19 @@ export default function eventStream({ since, host }, cb) {
     .on('reconnect', (n, delay) => stream.emit('reconnect', n, delay))
     .on('disconnect', (err) => stream.emit('disconnect', err))
 
-  if (cb) stream.once('connection', cb)
+  if (cb) {
+    let onError, onConnection
+    
+    stream.once('connection', onConnection =()=> {
+      stream.removeListener('error', onError)
+      cb(null, stream)
+    })
+
+    stream.once('error', onError =(err)=> {
+      stream.removeListener('connection', onConnection)
+      cb(err)
+    })
+  }
 
   return stream
 }
