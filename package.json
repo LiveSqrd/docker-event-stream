@@ -1,0 +1,37 @@
+{
+  "name": "docker-event-stream",
+  "version": "1.0.0",
+  "description": "Docker event stream",
+  "main": "lib/index.js",
+  "dependencies": {
+    "6to5-runtime": "^3.6.5",
+    "docker-remote-api": "^4.4.1",
+    "reconnect-core": "^0.2.1",
+    "through-json": "^1.1.0",
+    "through2-filter": "^1.4.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-6to5": "^3.0.0",
+    "gulp-jshint": "^1.9.2"
+  },
+  "scripts": {
+    "prepublish": "gulp dist",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LiveSqrd/docker-events.git"
+  },
+  "keywords": [
+    "docker",
+    "stream",
+    "events"
+  ],
+  "author": "Nathan Zadoks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LiveSqrd/docker-events/issues"
+  },
+  "homepage": "https://github.com/LiveSqrd/docker-events"
+}

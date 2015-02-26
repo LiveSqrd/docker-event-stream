@@ -1,0 +1,10 @@
+{
+  "asi": true,
+  "laxbreak": true,
+  "laxcomma": true,
+  "node": true,
+  "strict": true,
+  "newcap": false,
+  "esnext": true,
+  "-W079": true
+}
