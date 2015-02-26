@@ -33,3 +33,36 @@ var eventStream = require('docker-event-stream')
 
   Emitted when the connection to Docker is lost, with an optional error.
 
+## Example
+
+```js
+var eventStream = require('docker-event-stream')
+
+eventStream(function(err, stream) {
+  if (err) throw err
+  console.log('connected!')
+  stream.on('data', console.log)
+})
+```
+
+  Output:
+
+```
+connected!
+{ status: 'create',
+  id: 'a6180d6983f5e6e0a8df13b0db228081e68cc8d5ca81b8ad045bfc651bbf0d3d',
+  from: '9bc6673ee5b5',
+  time: 1424923014 }
+{ status: 'start',
+  id: 'a6180d6983f5e6e0a8df13b0db228081e68cc8d5ca81b8ad045bfc651bbf0d3d',
+  from: '9bc6673ee5b5',
+  time: 1424923014 }
+{ status: 'die',
+  id: 'a6180d6983f5e6e0a8df13b0db228081e68cc8d5ca81b8ad045bfc651bbf0d3d',
+  from: '9bc6673ee5b5',
+  time: 1424923016 }
+{ status: 'destroy',
+  id: 'a6180d6983f5e6e0a8df13b0db228081e68cc8d5ca81b8ad045bfc651bbf0d3d',
+  from: '9bc6673ee5b5',
+  time: 1424923017 }
+```
