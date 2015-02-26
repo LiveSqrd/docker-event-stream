@@ -35,7 +35,7 @@ export default function eventStream(opts, cb) {
   })
 
   re.since = since
-  re.connect(Docker({ host, version: 'v1.17' }))
+  re.connect(Docker({host}))
     .on('connection', (conn) => stream.emit('connection'))
     .on('reconnect', (n, delay) => stream.emit('reconnect', n, delay))
     .on('disconnect', (err) => stream.emit('disconnect', err))
