@@ -54,5 +54,7 @@ export default function eventStream(opts, cb) {
     })
   }
 
+  stream.on('close', () => re.disconnect())
+
   return stream
 }
